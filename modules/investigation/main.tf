@@ -29,7 +29,7 @@ resource "aws_iam_role_policy" "investigation_devops_agent" {
     Version = "2012-10-17"
     Statement = [{
       Effect   = "Allow"
-      Action   = "aiops:StartInvestigation"
+      Action   = "aidevops:CreateChat"
       Resource = "*"
     }]
   })
@@ -47,8 +47,9 @@ resource "aws_lambda_function" "investigation" {
   function_name    = "devops-agent-investigation"
   role             = aws_iam_role.investigation.arn
   handler          = "index.lambda_handler"
-  runtime          = "python3.12"
+  runtime          = "python3.13"
   timeout          = 30
+  layers           = ["arn:aws:lambda:us-east-1:756113445894:layer:boto3-devops-agent:1"]
   filename         = data.archive_file.investigation.output_path
   source_code_hash = data.archive_file.investigation.output_base64sha256
 
