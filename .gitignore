@@ -1,0 +1,11 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# 機密値(実際の値が入るファイル)
+terraform.tfvars
+
+# Lambda デプロイ用 zip
+*.zip
+terratorm.tfvars
