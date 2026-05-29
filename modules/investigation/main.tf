@@ -29,7 +29,7 @@ resource "aws_iam_role_policy" "investigation_devops_agent" {
     Version = "2012-10-17"
     Statement = [{
       Effect   = "Allow"
-      Action   = "aidevops:CreateChat"
+      Action   = ["aidevops:CreateChat", "aidevops:CreateBacklogTask"]
       Resource = "*"
     }]
   })
