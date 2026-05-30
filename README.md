@@ -106,3 +106,4 @@ aws lambda invoke \
 
 ### Slack 通知
 調査開始・完了時に Slack の #alert チャンネルへ自動通知。Task ID とレポートリンクを含む。
+![Slack通知](docs/slack-notification.png)
