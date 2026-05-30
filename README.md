@@ -5,7 +5,7 @@ CloudWatch アラーム発火を起点に、DevOps Agent への調査起票・Sl
 
 ## アーキテクチャ
 
-![構成図](docs/architecture.drawio.png)
+![構成図](docs/architecture.png)
 
 ```
 Lambda エラー発生
